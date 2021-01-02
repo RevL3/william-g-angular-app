@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand">Noice</span>
+    </div>
+    <!-- <span>Welcome {{ name }}!</span> -->
+    <div class="navbar-default mr-auto">
+      <ul class="nav navbar-nav">
+        <li
+          routerLinkActive="active">
+          <a routerLink='/search'>Search</a>
+        </li>
+        <li
+          routerLinkActive="active">
+          <a routerLink='/history'>History</a>
+        </li>
+      </ul>
+      <div class="nav navbar-nav navbar-right">
+        <button class="btn btn-danger" (click)="onLogOut()">Log Out</button>
+      </div>
+
+    </div>
+  </div>
+</nav>

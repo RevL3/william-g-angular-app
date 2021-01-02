@@ -1,0 +1,10 @@
+<div class="container">
+  <form class="form-container" [formGroup]="search" >
+    <h3>Artist</h3>
+    <input formControlName="artist">
+    <h3>Track</h3>
+    <input formControlName="track">
+    <button class="btn btn-success">Search</button>
+    <app-search-results></app-search-results>
+  </form>
+</div>

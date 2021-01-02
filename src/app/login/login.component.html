@@ -1,0 +1,17 @@
+<div class="container">
+  <form class="form-container" [formGroup]="login">
+
+    <label>User Name</label>
+    <input formControlName="name">
+
+    <label>Password</label>
+    <input formControlName="password">
+
+    <button
+    class="btn btn-success"
+    type="submit"
+    [disabled]="!login.valid"
+    (click)="onLogin()"
+    >Log In</button>
+  </form>
+</div>
