@@ -1,10 +1,30 @@
-<div class="container">
-  <form class="form-container" [formGroup]="search" >
-    <h3>Artist</h3>
-    <input formControlName="artist">
-    <h3>Track</h3>
-    <input formControlName="track">
-    <button class="btn btn-success">Search</button>
-    <app-search-results></app-search-results>
-  </form>
+<div class="container-fluid mt-0">
+  <div class="row">
+    <div id="search-input" class="col-xs-2">
+      <form
+        class="form-container"
+        [formGroup]="searchForm"
+        (ngSubmit)="onSubmit()">
+        <h3>Artist</h3>
+        <input
+          type="text"
+          id="artist"
+          formControlName="artist"
+          class="form-control">
+        <span
+          *ngIf="!searchForm.get('artist').valid && searchForm.get('track').touched"
+          class="help-block">Please enter an artist name</span>
+        <h3>Track</h3>
+        <input type="text"
+          id="track"
+          formControlName="track"
+          class="form-control">
+        <button class="btn btn-success" [disabled]="!searchForm.valid">Search</button>
+      </form>
+    </div>
+    <div class="col-xs-10 search-results">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
 </div>

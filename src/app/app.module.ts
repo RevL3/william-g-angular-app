@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { HistoryComponent } from './history/history.component';
 import { SearchResultsComponent } from './search/search-results/search-results.component';
+import { SearchStartComponent } from './search/search-start/search-start.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SearchResultsComponent } from './search/search-results/search-results.c
     LoginComponent,
     SearchComponent,
     HistoryComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    SearchStartComponent
   ],
   imports: [
     BrowserModule,
